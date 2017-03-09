@@ -12,5 +12,6 @@
     <module>EJBStatelessBean-LibrarySessionBean-Demo</module>
     <module>HelloUser-Embeddable-Demo</module>
     <module>chapter1</module>
+    <module>javaee7-tutorial</module>
   </modules>
 </project>
