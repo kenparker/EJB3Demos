@@ -1,3 +1,5 @@
 /EJBStatelessBean-LibrarySessionBean-Demo/target/
 /HelloUser-Demo/target/
 /HelloUser-Embeddable-Demo/target/
+/EJBStatelessBean-BidService-Demo/target/
+/EJBStatelessBean-BidService-Demo/nb-configuration.xml

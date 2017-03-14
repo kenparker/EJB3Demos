@@ -13,5 +13,6 @@
     <module>HelloUser-Embeddable-Demo</module>
     <module>chapter1</module>
     <module>javaee7-tutorial</module>
+    <module>EJBStatelessBean-BidService-Demo</module>
   </modules>
 </project>
