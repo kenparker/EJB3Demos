@@ -14,5 +14,6 @@
     <module>chapter1</module>
     <module>javaee7-tutorial</module>
     <module>EJBStatelessBean-BidService-Demo</module>
+    <module>chapter3</module>
   </modules>
 </project>
