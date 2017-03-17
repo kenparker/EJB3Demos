@@ -4,3 +4,6 @@
 /EJBStatelessBean-BidService-Demo/target/
 /EJBStatelessBean-BidService-Demo/nb-configuration.xml
 /chapter3/ActionBazaar-ejb/target/
+/chapter3/ActionBazaar-client/target/
+/chapter3/ActionBazaar-ear/target/
+/chapter3/ActionBazaar-web/target/
