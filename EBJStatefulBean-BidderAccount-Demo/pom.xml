@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>EJB3Demos</artifactId>
+        <groupId>com.maggioni</groupId>
+        <version>1.0</version>
+    </parent>
+    <groupId>com.maggioni</groupId>
+    <artifactId>EBJStatefulBean-BidderAccount-Demo</artifactId>
+    <version>1.0</version>
+    <packaging>pom</packaging>
+    <name>EBJStatefulBean-BidderAccount-Demo</name>
+    <modules>
+        <module>EBJStatefulBean-BidderAccount-Demo-ear</module>
+        <module>EBJStatefulBean-BidderAccount-Demo-web</module>
+        <module>EBJStatefulBean-BidderAccount-Demo-ejb</module>
+    </modules>
+</project>
