@@ -4,3 +4,6 @@
 /EJBStatelessBean-BidService-Demo/target/
 /EJBStatelessBean-BidService-Demo/nb-configuration.xml
 /chapter3/ActionBazaar-ejb/target/
+/EBJStatefulBean-BidderAccount-Demo/EBJStatefulBean-BidderAccount-Demo-ejb/target/
+/EBJStatefulBean-BidderAccount-Demo/EBJStatefulBean-BidderAccount-Demo-web/target/
+/EBJStatefulBean-BidderAccount-Demo/EBJStatefulBean-BidderAccount-Demo-ear/target/
