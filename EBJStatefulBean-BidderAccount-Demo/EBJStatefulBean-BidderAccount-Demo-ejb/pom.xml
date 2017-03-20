@@ -9,7 +9,7 @@
 
     <groupId>com.maggioni</groupId>
     <artifactId>EBJStatefulBean-BidderAccount-Demo-ejb</artifactId>
-    <version>1.0</version>
+    
 
     <dependencies>
         <dependency>
