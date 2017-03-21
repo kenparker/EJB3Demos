@@ -1,4 +1,4 @@
-package com.maggioni.model;
+package com.maggioni;
 
 public class BiographicalInfo {
     

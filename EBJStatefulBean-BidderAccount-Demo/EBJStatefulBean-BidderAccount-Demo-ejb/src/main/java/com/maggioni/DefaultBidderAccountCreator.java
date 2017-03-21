@@ -1,28 +1,24 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package com.maggioni;
 
-import com.maggioni.model.BillingInfo;
-import com.maggioni.model.BiographicalInfo;
-import javax.annotation.PostConstruct;
-import javax.ejb.PostActivate;
-import javax.ejb.Stateful;
+import javax.ejb.Stateless;
+import javax.ejb.LocalBean;
 
-@Stateful(name = "BidderAccountCreator")
-public class DefaultBidderAccountCreator implements BidderAccountCreator{
+/**
+ *
+ * @author martin
+ */
+@Stateless
+@LocalBean
+public class DefaultBidderAccountCreator {
 
-    @PostConstruct
-    @PostActivate
-    public void setUp() {
-        
-    }
-    
-    @Override
-    public void addBillingInfo(BillingInfo billingInfo) {
-        
+    public void businessMethod() {
     }
 
-    @Override
-    public void addBiographicalInfo(BiographicalInfo biographicalInfo) {
-        
-    }
-   
+    // Add business logic below. (Right-click in editor and choose
+    // "Insert Code > Add Business Method")
+
 }

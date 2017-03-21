@@ -1,7 +1,5 @@
 package com.maggioni;
 
-import com.maggioni.model.BiographicalInfo;
-import com.maggioni.model.BillingInfo;
 import javax.ejb.Remote;
 
 @Remote
