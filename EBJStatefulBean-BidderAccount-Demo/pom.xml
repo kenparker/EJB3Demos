@@ -38,6 +38,7 @@
         <module>EBJStatefulBean-BidderAccount-Demo-ear</module>
         <module>EBJStatefulBean-BidderAccount-Demo-ejb</module>
         <module>EBJStatefulBean-BidderAccount-Demo-web</module>
+        <module>EJBStatefulBean-BidderAccount-Demo-client</module>
     </modules>
     
     <dependencyManagement>

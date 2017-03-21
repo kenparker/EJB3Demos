@@ -26,6 +26,11 @@
             <artifactId>EBJStatefulBean-BidderAccount-Demo-ejb</artifactId>
             <type>ejb</type>
         </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>EJBStatefulBean-BidderAccount-Demo-client</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
     
      <build>
