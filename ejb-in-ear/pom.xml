@@ -1,16 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <artifactId>EJB3Demos</artifactId>
-        <groupId>com.maggioni</groupId>
-        <version>1.0</version>
-    </parent>
     <groupId>com.maggioni</groupId>
-    <artifactId>EBJStatefulBean-BidderAccount-Demo</artifactId>
-    <version>1.0</version>
+    <artifactId>EJB-StatefulBean-ejb-in-ear</artifactId>
+    <version>10.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    
+    <name>EJB-StatefulBean-ejb-in-ear</name>
+    <description>Demo</description>
+   
     <properties>
         <!-- Explicitly declaring the source encoding eliminates the following message: -->
         <!-- [WARNING] Using platform encoding (UTF-8 actually) to copy filtered
@@ -32,21 +30,20 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
     </properties>
-    
-    <name>EBJStatefulBean-BidderAccount-Demo</name>
+
     <modules>
-        <module>EBJStatefulBean-BidderAccount-Demo-ear</module>
-        <module>EBJStatefulBean-BidderAccount-Demo-ejb</module>
-        <module>EBJStatefulBean-BidderAccount-Demo-web</module>
+        <module>ejb</module>
+        <module>web</module>
+        <module>ear</module>
     </modules>
-    
+
     <dependencyManagement>
         <dependencies>
             <!-- Define the version of the EJB jar so that we don't need
             to repeat ourselves in every module -->
             <dependency>
                 <groupId>com.maggioni</groupId>
-                <artifactId>EBJStatefulBean-BidderAccount-Demo-ejb</artifactId>
+                <artifactId>EJB-StatefulBean-ejb-in-ear-ejb</artifactId>
                 <version>${project.version}</version>
                 <type>ejb</type>
             </dependency>
@@ -55,16 +52,21 @@
             ourselves in every module -->
             <dependency>
                 <groupId>com.maggioni</groupId>
-                <artifactId>EBJStatefulBean-BidderAccount-Demo-web</artifactId>
+                <artifactId>EJB-StatefulBean-ejb-in-ear-web</artifactId>
                 <version>${project.version}</version>
                 <type>war</type>
                 <scope>compile</scope>
             </dependency>
-
-            
+               
+            <dependency>
+                <groupId>javax</groupId>
+                <artifactId>javaee-api</artifactId>
+                <version>7.0</version>
+            </dependency>
+           
         </dependencies>
     </dependencyManagement>
-    
+
     <build>
         <plugins>
             <!-- The WildFly plug-in deploys your ear to a local WildFly container -->

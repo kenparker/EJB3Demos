@@ -7,3 +7,6 @@
 /chapter3/ActionBazaar-client/target/
 /chapter3/ActionBazaar-ear/target/
 /chapter3/ActionBazaar-web/target/
+/ejb-in-ear/ear/target/
+/ejb-in-ear/ejb/target/
+/ejb-in-ear/web/target/
