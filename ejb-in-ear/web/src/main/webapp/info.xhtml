@@ -8,8 +8,14 @@
 <title>Info Demo</title>
 </head>
     <body>
-        <h1>Info Demo</h1>
-        <h:outputLabel value="#{info.hello}" />
+        <h:form>
+            <h:outputLabel>Name :</h:outputLabel>
+            <h:inputText value="#{firstName}" />
+            <h:inputText value="#{lastName}" />
+            <h:commandButton id="addFirstName" value="add First Name" action="#{info.setFirstName(firstName)}"/>
+            <h:commandButton id="addLastName" value="add Last Name" action="#{info.setLastName(lastName)}"/>
+            
+        </h:form>
     </body>
 </html>
 
