@@ -18,5 +18,7 @@
     <module>ejb-in-ear</module>
     <module>ejb-remote</module>
     <module>EJB-Remote-Demo</module>
+    <module>EJB-Remote-Demo-Client-2</module>
+    <module>EJB-Remote-Demo-Client-3</module>
   </modules>
 </project>
