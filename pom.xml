@@ -16,5 +16,6 @@
     <module>EJBStatelessBean-BidService-Demo</module>
     <module>chapter3</module>
     <module>ejb-in-ear</module>
+    <module>ejb-remote</module>
   </modules>
 </project>

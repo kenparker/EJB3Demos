@@ -10,3 +10,5 @@
 /ejb-in-ear/ear/target/
 /ejb-in-ear/ejb/target/
 /ejb-in-ear/web/target/
+/ejb-remote/client/target/
+/ejb-remote/server-side/target/
