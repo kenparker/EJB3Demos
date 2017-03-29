@@ -12,3 +12,6 @@
 /ejb-in-ear/web/target/
 /ejb-remote/client/target/
 /ejb-remote/server-side/target/
+/EJB-Remote-Demo/EJB-Remote-Demo-ejb/target/
+/EJB-Remote-Demo/EJB-Remote-Demo-ear/target/
+/EJB-Remote-Demo/EJB-Remote-Demo-Client/target/
