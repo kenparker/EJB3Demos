@@ -25,3 +25,5 @@
 /Ejb3-in-Action/chapter3/ActionBazaar-ear/target/
 /Ejb3-in-Action/chapter3/ActionBazaar-ejb/target/
 /Ejb3-in-Action/chapter3/ActionBazaar-web/target/
+/WildFly-10-Quickstart/ejb-remote/client/target/
+/WildFly-10-Quickstart/ejb-remote/server-side/target/

@@ -21,5 +21,6 @@
     <module>EJB-Remote-Demo-Client-3</module>
     <module>Maven-Basics-Demo</module>
     <module>Ejb3-in-Action</module>
+    <module>WildFly-10-Quickstart</module>
   </modules>
 </project>
