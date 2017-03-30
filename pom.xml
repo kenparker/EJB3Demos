@@ -14,7 +14,6 @@
     <module>javaee7-tutorial</module>
     <module>chapter3</module>
     <module>ejb-remote</module>
-    <module>EJB-Remote-Demo-Client-3</module>
     <module>Maven-Basics-Demo</module>
     <module>Ejb3-in-Action</module>
     <module>WildFly-10-Quickstart</module>
