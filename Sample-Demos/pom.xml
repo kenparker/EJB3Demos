@@ -8,5 +8,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>EJBStatelessBean-LibrarySessionBean-Demo</module>
+        <module>EJBStatelessBean-BidService-Demo</module>
     </modules>
 </project>

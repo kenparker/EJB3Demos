@@ -12,7 +12,6 @@
     <module>EJBStatelessBean-LibrarySessionBean-Demo</module>
     <module>HelloUser-Embeddable-Demo</module>
     <module>javaee7-tutorial</module>
-    <module>EJBStatelessBean-BidService-Demo</module>
     <module>chapter3</module>
     <module>ejb-in-ear</module>
     <module>ejb-remote</module>
