@@ -17,3 +17,11 @@
 /EJB-Remote-Demo/EJB-Remote-Demo-Client/target/
 /EJB-Remote-Demo-Client-2/target/
 /EJB-Remote-Demo-Client-3/target/
+/Maven-Basics-Demo/Maven-Basic-WEB/target/
+/Maven-Basics-Demo/Maven-Basic-EJB/target/
+/Maven-Basics-Demo/Maven-Basic-Domain/target/
+/Maven-Basics-Demo/Maven-Basic-EAR/target/
+/Ejb3-in-Action/chapter3/ActionBazaar-client/target/
+/Ejb3-in-Action/chapter3/ActionBazaar-ear/target/
+/Ejb3-in-Action/chapter3/ActionBazaar-ejb/target/
+/Ejb3-in-Action/chapter3/ActionBazaar-web/target/

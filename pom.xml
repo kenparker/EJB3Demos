@@ -11,7 +11,6 @@
   <modules>
     <module>EJBStatelessBean-LibrarySessionBean-Demo</module>
     <module>HelloUser-Embeddable-Demo</module>
-    <module>chapter1</module>
     <module>javaee7-tutorial</module>
     <module>EJBStatelessBean-BidService-Demo</module>
     <module>chapter3</module>
@@ -21,5 +20,6 @@
     <module>EJB-Remote-Demo-Client-2</module>
     <module>EJB-Remote-Demo-Client-3</module>
     <module>Maven-Basics-Demo</module>
+    <module>Ejb3-in-Action</module>
   </modules>
 </project>
