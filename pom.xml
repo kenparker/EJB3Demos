@@ -22,5 +22,6 @@
     <module>Maven-Basics-Demo</module>
     <module>Ejb3-in-Action</module>
     <module>WildFly-10-Quickstart</module>
+    <module>Sample-Demos</module>
   </modules>
 </project>
