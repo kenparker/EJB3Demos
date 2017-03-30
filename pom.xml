@@ -13,7 +13,6 @@
     <module>HelloUser-Embeddable-Demo</module>
     <module>javaee7-tutorial</module>
     <module>chapter3</module>
-    <module>ejb-in-ear</module>
     <module>ejb-remote</module>
     <module>EJB-Remote-Demo</module>
     <module>EJB-Remote-Demo-Client-2</module>
