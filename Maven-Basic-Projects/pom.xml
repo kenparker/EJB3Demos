@@ -14,5 +14,6 @@
         <module>Maven-Basics-Demo</module>
         <module>../Maven-Basics-Demo-micro-WildFly-10-1</module>
         <module>Maven-Basics-Demo-micro-WildFly-10-1</module>
+        <module>Maven-Basic-Demo-micro-GlassFish</module>
     </modules>
 </project>
