@@ -9,13 +9,13 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
   <modules>
-    <module>EJBStatelessBean-LibrarySessionBean-Demo</module>
     <module>HelloUser-Embeddable-Demo</module>
     <module>chapter3</module>
     <module>ejb-remote</module>
-    <module>Maven-Basics-Demo</module>
     <module>Ejb3-in-Action</module>
     <module>WildFly-10-Quickstart</module>
     <module>Sample-Demos</module>
+    <module>Maven-Basic-Projects</module>
+    <module>Maven-Basic-Projects</module>
   </modules>
 </project>
