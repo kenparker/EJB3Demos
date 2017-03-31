@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.maggioni</groupId>
+    <artifactId>Maven-Basics-Demo-micro-WildFly-10-1</artifactId>
+    <version>1.0</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>Maven-Basic-micro-WildFly-10-1-EAR</module>
+        <module>Maven-Basic-micro-WildFly-10-1-WEB</module>
+        <module>Maven-Basic-micro-WildFly-10-1-EJB</module>
+    </modules>
+    
+    <properties>
+        <!--  encoding-->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!--java version -->
+        <java-version>1.7</java-version>       
+        <!-- plugin versions -->
+        <ejb-plugin-version>2.3</ejb-plugin-version>
+        <war-plugin-version>3.0.0</war-plugin-version>
+        <ear-plugin-version>2.8</ear-plugin-version>
+        <compiler-plugin-version>3.1</compiler-plugin-version>
+        <!-- dependency versions -->
+        <javaee-api-version>7.0</javaee-api-version>
+        <!-- EJB spec version -->
+        <ejb-spec-version>3.2</ejb-spec-version>
+        
+        <!-- Define the version of the JBoss Java EE APIs we want to import.
+        Any dependencies from org.jboss.spec will have their version defined by this
+        BOM -->
+        <version.jboss.bom>10.1.0.Final</version.jboss.bom>
+
+        <!-- EAP component version management BOM -->
+        <version.jboss.bom.eap>7.0.0-build-7</version.jboss.bom.eap>
+        <version.jboss.spec.javaee.7.0>1.0.3.Final</version.jboss.spec.javaee.7.0>
+        <!-- maven-compiler-plugin -->
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+    </properties>
+    
+    <dependencyManagement>
+        <dependencies>
+            
+            <dependency>
+                <groupId>org.wildfly.bom</groupId>
+                <artifactId>wildfly-javaee7-with-tools</artifactId>
+                <version>${version.jboss.bom}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    
+    <!-- Plugin management -->
+    <build>
+        <pluginManagement>
+            <plugins>
+                <!-- compiler plugin -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${compiler-plugin-version}</version>
+                    <configuration>
+                        <source>${java-version}</source>
+                        <target>${java-version}</target>
+                        <encoding>${project.build.sourceEncoding}</encoding>
+                    </configuration>
+                </plugin>
+                <!-- ejb plugin -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-ejb-plugin</artifactId>
+                    <version>${ejb-plugin-version}</version>
+                    <configuration>
+                        <ejbVersion>${ejb-spec-version}</ejbVersion>
+                    </configuration>
+                </plugin>
+ 
+                <!-- war plugin -skinny wars mode! -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>${war-plugin-version}</version>
+                    <configuration>
+                        <failOnMissingWebXml>false</failOnMissingWebXml>
+                        <packagingExcludes>WEB-INF/lib/*.jar</packagingExcludes>
+                        <archive>
+                            <manifest>
+                                <addClasspath>true</addClasspath>
+                                <classpathPrefix>lib/</classpathPrefix>
+                            </manifest>
+                        </archive>
+                        <webResources>
+                            <resource>
+                                <filtering>true</filtering>
+                                <directory>src/main/webapp</directory>
+                                <includes>
+                                    <include>**/web.xml</include>
+                                </includes>
+                            </resource>
+                        </webResources>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
