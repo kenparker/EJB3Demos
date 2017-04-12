@@ -14,5 +14,6 @@
         <module>EJB-Remote-Demo-Client-2</module>
         <module>EJB-Remote-Demo-Client-3</module>
         <module>EBJStatefulBean-BidderAccount-Demo</module>
+        <module>EJB-Stateless-Remote-Annotations-Demo-1/EJB-Stateless-Remote-Annotations-Demo-1</module>
     </modules>
 </project>
