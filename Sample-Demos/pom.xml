@@ -15,5 +15,6 @@
         <module>EJB-Remote-Demo-Client-3</module>
         <module>EBJStatefulBean-BidderAccount-Demo</module>
         <module>EJB-Stateless-Remote-Annotations-Demo-1/EJB-Stateless-Remote-Annotations-Demo-1</module>
-    </modules>
+    <module>Wildfly-Quickstart-EJB-Remote-Demo-1</module>
+  </modules>
 </project>

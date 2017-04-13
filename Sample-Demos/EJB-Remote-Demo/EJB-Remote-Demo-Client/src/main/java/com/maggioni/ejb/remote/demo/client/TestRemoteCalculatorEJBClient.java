@@ -77,7 +77,7 @@ java:module/TestRemoteCalculatorFacade
         // Namen zusammenstellen
         StringBuilder nameBuilder = new StringBuilder();
         if (!remoteNamingProject) {
-            nameBuilder.append("ejb:");
+            nameBuilder.append("ejb:/");
         }
         // Doppelte Trennzeichen sind unproblematisch
         nameBuilder.append(appName);
@@ -85,7 +85,7 @@ java:module/TestRemoteCalculatorFacade
         nameBuilder.append(moduleName);
         nameBuilder.append("/");
         nameBuilder.append(distinctName);
-        nameBuilder.append("/");
+        //nameBuilder.append("/");
         nameBuilder.append(beanName);
         nameBuilder.append("!");
         nameBuilder.append(viewClassName);
@@ -95,13 +95,17 @@ java:module/TestRemoteCalculatorFacade
 
     private static TestRemoteCalculatorFacadeInterface lookupRemoteStatelessCalculator() throws NamingException {
         final Context context = new InitialContext(TestRemoteCalculatorEJBClient.getJndiPropertiesCoreApiPropertiesFile());
-        String jndiName = createLookUpName(true);
+        String jndiName = createLookUpName(false);
+        
+        // ejb:/demo/EJB-Remote-Demo-ejb-1.0/CalculatorBean!com.maggioni.Stateless2.RemoteCalculator
+        // ejb:/Remote/EJB-Remote-Demo-ejb-1.0/TestRemoteCalculatorFacade!com.maggioni.Stateless1.TestRemoteCalculatorFacadeInterface
+        ///     Remote/EJB-Remote-Demo-ejb-1.0/TestRemoteCalculatorFacade!com.maggioni.Stateless1.TestRemoteCalculatorFacadeInterface
         TestRemoteCalculatorFacadeInterface res = (TestRemoteCalculatorFacadeInterface) context.lookup(jndiName);
         return res;
     }
 
-    private static Hashtable getJndiPropertiesCoreApiPropertiesFile() {
-        final Hashtable jndiProperties = new Hashtable();
+    private static Hashtable<String,String> getJndiPropertiesCoreApiPropertiesFile() {
+        final Hashtable<String,String> jndiProperties = new Hashtable();
         jndiProperties.put(Context.URL_PKG_PREFIXES, "org.jboss.ejb.client.naming");
         return jndiProperties;
     }

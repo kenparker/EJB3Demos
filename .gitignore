@@ -72,3 +72,6 @@
 /Maven-Basic-Projects/Maven-Basic-Demo-micro-GlassFish/Maven-Basic-Demo-micro-GlassFish-ear/nb-configuration.xml
 /Maven-Basic-Projects/Maven-Basic-Demo-micro-GlassFish/Maven-Basic-Demo-micro-GlassFish-ejb/nb-configuration.xml
 /Maven-Basic-Projects/Maven-Basic-Demo-micro-GlassFish/Maven-Basic-Demo-micro-GlassFish-web/nb-configuration.xml
+/Sample-Demos/Wildfly-Quickstart-EJB-Remote-Demo-1/Wildfly-Quickstart-EJB-Remote-Demo-1-ejb/target/
+/Sample-Demos/Wildfly-Quickstart-EJB-Remote-Demo-1/Wildfly-Quickstart-EJB-Remote-Demo-1-Client/target/
+/Sample-Demos/Wildfly-Quickstart-EJB-Remote-Demo-1/Wildfly-Quickstart-EJB-Remote-Demo-1-ear/target/
