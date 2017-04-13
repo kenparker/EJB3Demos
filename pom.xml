@@ -16,6 +16,6 @@
     <module>WildFly-10-Quickstart</module>
     <module>Sample-Demos</module>
     <module>Maven-Basic-Projects</module>
-    <module>Maven-Basic-Projects</module>
+   
   </modules>
 </project>
