@@ -38,7 +38,7 @@ public class RemoteEJBClient {
         invokeStatelessBean();
 
         // Invoke a stateful bean
-        invokeStatefulBean();
+        //invokeStatefulBean();
     }
 
     /**
@@ -130,7 +130,7 @@ public class RemoteEJBClient {
 
         // let's do the lookup
         // java:global/Remote/Wildfly-Quickstart-EJB-Remote-Demo-1-ejb/CalculatorBean
-        return (RemoteCalculator) context.lookup("ejb:/Remote/Wildfly-Quickstart-EJB-Remote-Demo-1-ejb/CalculatorBean!"
+        return (RemoteCalculator) context.lookup("ejb:Remote/Wildfly-Quickstart-EJB-Remote-Demo-1-ejb//CalculatorBean!"
             + RemoteCalculator.class.getName());
     }
 
@@ -164,7 +164,7 @@ public class RemoteEJBClient {
         // the whole package name.
 
         // let's do the lookup
-        return (RemoteCounter) context.lookup("ejb:/Remote/Wildfly-Quickstart-EJB-Remote-Demo-1-ejb/CounterBean!"
+        return (RemoteCounter) context.lookup("ejb:Remote/Wildfly-Quickstart-EJB-Remote-Demo-1-ejb//CounterBean!"
             + RemoteCounter.class.getName() + "?stateful");
     }
 }
