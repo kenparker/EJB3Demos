@@ -103,7 +103,7 @@ public class RemoteEJBClient {
         // the whole package name.
 
         // let's do the lookup
-        final String jndiname = "ejb:/Remote/EJB-Remote-Demo-ejb-1.0/CalculatorBean!"
+        final String jndiname = "ejb:/Remote/Wildfly-Quickstart-EJB-Remote-Demo-1-ejb/CalculatorBean!"
                 + RemoteCalculator.class.getName();
         System.out.println("jndiname is : " + jndiname);
         return (RemoteCalculator) context.lookup(jndiname);
