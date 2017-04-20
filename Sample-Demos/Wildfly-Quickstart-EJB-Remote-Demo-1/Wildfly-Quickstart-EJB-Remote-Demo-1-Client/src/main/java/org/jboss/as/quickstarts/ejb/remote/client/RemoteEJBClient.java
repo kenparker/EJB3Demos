@@ -100,44 +100,17 @@ public class RemoteEJBClient {
         }
     }
 
-    /**
-     * Looks up and returns the proxy to remote stateless calculator bean
-     *
-     * @return
-     * @throws NamingException
-     */
     private static RemoteCalculator lookupRemoteStatelessCalculator() throws NamingException {
         Properties jndiProperties = new Properties();
-        jndiProperties.put("jboss.naming.client.ejb.context", true);
-        jndiProperties.put(Context.URL_PKG_PREFIXES, "org.jboss.ejb.client.naming");
         jndiProperties.put(javax.naming.Context.INITIAL_CONTEXT_FACTORY, "org.jboss.naming.remote.client.InitialContextFactory");
-        jndiProperties.put(javax.naming.Context.PROVIDER_URL, "remote://env-2627208.jelastic.dogado.eu:4447");
+        jndiProperties.put(javax.naming.Context.PROVIDER_URL, "http-remoting://env-2627208.jelastic.dogado.eu:4447");
         jndiProperties.put(javax.naming.Context.SECURITY_PRINCIPAL, "app");
         jndiProperties.put(javax.naming.Context.SECURITY_CREDENTIALS, "app");
         final Context context = new InitialContext(jndiProperties);
+        final String name = "Remote/Wildfly-Quickstart-EJB-Remote-Demo-1-ejb/CalculatorBean!"
+                + RemoteCalculator.class.getName();
 
-        // The JNDI lookup name for a stateless session bean has the syntax of:
-        // ejb:<appName>/<moduleName>/<distinctName>/<beanName>!<viewClassName>
-        //
-        // <appName> The application name is the name of the EAR that the EJB is deployed in
-        // (without the .ear). If the EJB JAR is not deployed in an EAR then this is
-        // blank. The app name can also be specified in the EAR's application.xml
-        //
-        // <moduleName> By the default the module name is the name of the EJB JAR file (without the
-        // .jar suffix). The module name might be overridden in the ejb-jar.xml
-        //
-        // <distinctName> : WildFly allows each deployment to have an (optional) distinct name.
-        // This example does not use this so leave it blank.
-        //
-        // <beanName> : The name of the session been to be invoked.
-        //
-        // <viewClassName>: The fully qualified classname of the remote interface. Must include
-        // the whole package name.
-
-        // let's do the lookup
-        // java:global/Remote/Wildfly-Quickstart-EJB-Remote-Demo-1-ejb/CalculatorBean
-        return (RemoteCalculator) context.lookup("ejb:Remote/Wildfly-Quickstart-EJB-Remote-Demo-1-ejb//CalculatorBean!"
-            + RemoteCalculator.class.getName());
+        return (RemoteCalculator) context.lookup(name);
     }
 
     /**
