@@ -22,6 +22,7 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
 import java.util.Hashtable;
+import java.util.Properties;
 import org.jboss.as.quickstarts.ejb.remote.stateful.RemoteCounter;
 import org.jboss.as.quickstarts.ejb.remote.stateless.RemoteCalculator;
 
@@ -106,8 +107,13 @@ public class RemoteEJBClient {
      * @throws NamingException
      */
     private static RemoteCalculator lookupRemoteStatelessCalculator() throws NamingException {
-        final Hashtable<String, String> jndiProperties = new Hashtable<>();
+        Properties jndiProperties = new Properties();
+        jndiProperties.put("jboss.naming.client.ejb.context", true);
         jndiProperties.put(Context.URL_PKG_PREFIXES, "org.jboss.ejb.client.naming");
+        jndiProperties.put(javax.naming.Context.INITIAL_CONTEXT_FACTORY, "org.jboss.naming.remote.client.InitialContextFactory");
+        jndiProperties.put(javax.naming.Context.PROVIDER_URL, "remote://env-2627208.jelastic.dogado.eu:4447");
+        jndiProperties.put(javax.naming.Context.SECURITY_PRINCIPAL, "app");
+        jndiProperties.put(javax.naming.Context.SECURITY_CREDENTIALS, "app");
         final Context context = new InitialContext(jndiProperties);
 
         // The JNDI lookup name for a stateless session bean has the syntax of:
