@@ -1,0 +1,52 @@
+jndiname is : ejb:Remote/EJB-Remote-Demo-ejb-1.0//CalculatorBean!com.maggioni.Stateless2.RemoteCalculator
+Apr 21, 2017 6:05:07 PM org.jboss.ejb.client.EJBClient <clinit>
+INFO: JBoss EJB Client version 2.1.4.Final
+Obtained a remote stateless calculator for invocation
+Adding 204 and 340 via the remote stateless calculator deployed on the server
+Apr 21, 2017 6:05:07 PM org.xnio.Xnio <clinit>
+INFO: XNIO version 3.4.0.Final
+Apr 21, 2017 6:05:07 PM org.xnio.nio.NioXnio <clinit>
+INFO: XNIO NIO Implementation Version 3.4.0.Final
+Apr 21, 2017 6:05:07 PM org.jboss.remoting3.EndpointImpl <clinit>
+INFO: JBoss Remoting version 4.0.21.Final
+Apr 21, 2017 6:05:09 PM org.jboss.ejb.client.remoting.ConfigBasedEJBClientContextSelector setupEJBReceivers
+WARN: Could not register a EJB receiver for connection to env-2627208.jelastic.dogado.eu:8080
+javax.security.sasl.SaslException: Authentication failed: all available authentication mechanisms failed:
+   JBOSS-LOCAL-USER: javax.security.sasl.SaslException: Failed to read server challenge [Caused by java.io.FileNotFoundException: \opt\repo\versions\10.1\standalone\tmp\auth\local8287173835056429828.challenge (Das System kann den angegebenen Pfad nicht finden)]
+   DIGEST-MD5: Server rejected authentication
+	at org.jboss.remoting3.remote.ClientConnectionOpenListener.allMechanismsFailed(ClientConnectionOpenListener.java:114)
+	at org.jboss.remoting3.remote.ClientConnectionOpenListener$Capabilities.handleEvent(ClientConnectionOpenListener.java:389)
+	at org.jboss.remoting3.remote.ClientConnectionOpenListener$Capabilities.handleEvent(ClientConnectionOpenListener.java:241)
+	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92)
+	at org.xnio.channels.TranslatingSuspendableChannel.handleReadable(TranslatingSuspendableChannel.java:198)
+	at org.xnio.channels.TranslatingSuspendableChannel$1.handleEvent(TranslatingSuspendableChannel.java:112)
+	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92)
+	at org.xnio.ChannelListeners$DelegatingChannelListener.handleEvent(ChannelListeners.java:1092)
+	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92)
+	at org.xnio.conduits.ReadReadyHandler$ChannelListenerHandler.readReady(ReadReadyHandler.java:66)
+	at org.xnio.nio.NioSocketConduit.handleReady(NioSocketConduit.java:89)
+	at org.xnio.nio.WorkerThread.run(WorkerThread.java:567)
+	at ...asynchronous invocation...(Unknown Source)
+	at org.jboss.remoting3.EndpointImpl.doConnect(EndpointImpl.java:294)
+	at org.jboss.remoting3.EndpointImpl.connect(EndpointImpl.java:430)
+	at org.jboss.ejb.client.remoting.EndpointPool$PooledEndpoint.connect(EndpointPool.java:192)
+	at org.jboss.ejb.client.remoting.NetworkUtil.connect(NetworkUtil.java:153)
+	at org.jboss.ejb.client.remoting.NetworkUtil.connect(NetworkUtil.java:133)
+	at org.jboss.ejb.client.remoting.ConnectionPool.getConnection(ConnectionPool.java:78)
+	at org.jboss.ejb.client.remoting.RemotingConnectionManager.getConnection(RemotingConnectionManager.java:51)
+	at org.jboss.ejb.client.remoting.ConfigBasedEJBClientContextSelector.setupEJBReceivers(ConfigBasedEJBClientContextSelector.java:161)
+	at org.jboss.ejb.client.remoting.ConfigBasedEJBClientContextSelector.getCurrent(ConfigBasedEJBClientContextSelector.java:118)
+	at org.jboss.ejb.client.remoting.ConfigBasedEJBClientContextSelector.getCurrent(ConfigBasedEJBClientContextSelector.java:47)
+	at org.jboss.ejb.client.EJBClientContext.getCurrent(EJBClientContext.java:281)
+	at org.jboss.ejb.client.EJBClientContext.requireCurrent(EJBClientContext.java:291)
+	at org.jboss.ejb.client.EJBInvocationHandler.doInvoke(EJBInvocationHandler.java:178)
+	at org.jboss.ejb.client.EJBInvocationHandler.invoke(EJBInvocationHandler.java:146)
+	at com.sun.proxy.$Proxy0.add(Unknown Source)
+	at com.maggioni.client.RemoteEJBClient.invokeStatelessBean(RemoteEJBClient.java:27)
+	at com.maggioni.client.RemoteEJBClient.main(RemoteEJBClient.java:15)
+
+Exception in thread "main" java.lang.IllegalStateException: EJBCLIENT000025: No EJB receiver available for handling [appName:Remote, moduleName:EJB-Remote-Demo-ejb-1.0, distinctName:] combination for invocation context org.jboss.ejb.client.EJBClientInvocationContext@6321e813
+	at org.jboss.ejb.client.EJBClientContext.requireEJBReceiver(EJBClientContext.java:798)
+	at org.jboss.ejb.client.ReceiverInterceptor.handleInvocation(ReceiverInterceptor.java:128)
+	at org.jboss.ejb.client.EJBClientInvocationContext.sendRequest(EJBClientInvocationContext.java:186)
+	at org.jboss.ejb.client.EJBInvocationHandler.sendRequestWithPossibleRetries(EJBInvocationHandler.java:255)
