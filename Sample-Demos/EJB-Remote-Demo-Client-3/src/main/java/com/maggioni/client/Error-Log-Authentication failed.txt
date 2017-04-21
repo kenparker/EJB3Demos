@@ -1,0 +1,46 @@
+Apr 21, 2017 4:32:24 PM org.xnio.Xnio <clinit>
+INFO: XNIO version 3.4.0.Final
+Apr 21, 2017 4:32:24 PM org.xnio.nio.NioXnio <clinit>
+INFO: XNIO NIO Implementation Version 3.4.0.Final
+Apr 21, 2017 4:32:25 PM org.jboss.remoting3.EndpointImpl <clinit>
+INFO: JBoss Remoting version 4.0.21.Final
+jndiname is : Remote/EJB-Remote-Demo-ejb-1.0/CalculatorBean!com.maggioni.Stateless2.RemoteCalculator
+Exception in thread "main" javax.naming.AuthenticationException: Failed to connect to any server. Servers tried: [http-remoting://env-2627208.jelastic.dogado.eu:8080 (Authentication failed: all available authentication mechanisms failed:
+   JBOSS-LOCAL-USER: javax.security.sasl.SaslException: Failed to read server challenge [Caused by java.io.FileNotFoundException: \opt\repo\versions\10.1\standalone\tmp\auth\local7673066471051300535.challenge (Das System kann den angegebenen Pfad nicht finden)]
+   DIGEST-MD5: Server rejected authentication)] [Root exception is javax.security.sasl.SaslException: Authentication failed: all available authentication mechanisms failed:
+   JBOSS-LOCAL-USER: javax.security.sasl.SaslException: Failed to read server challenge [Caused by java.io.FileNotFoundException: \opt\repo\versions\10.1\standalone\tmp\auth\local7673066471051300535.challenge (Das System kann den angegebenen Pfad nicht finden)]
+   DIGEST-MD5: Server rejected authentication]
+	at org.jboss.naming.remote.client.HaRemoteNamingStore.failOverSequence(HaRemoteNamingStore.java:238)
+	at org.jboss.naming.remote.client.HaRemoteNamingStore.namingStore(HaRemoteNamingStore.java:149)
+	at org.jboss.naming.remote.client.HaRemoteNamingStore.namingOperation(HaRemoteNamingStore.java:130)
+	at org.jboss.naming.remote.client.HaRemoteNamingStore.lookup(HaRemoteNamingStore.java:272)
+	at org.jboss.naming.remote.client.RemoteContext.lookupInternal(RemoteContext.java:104)
+	at org.jboss.naming.remote.client.RemoteContext.lookup(RemoteContext.java:93)
+	at org.jboss.naming.remote.client.RemoteContext.lookup(RemoteContext.java:146)
+	at javax.naming.InitialContext.lookup(InitialContext.java:417)
+	at com.maggioni.client.RemoteEJBClient.lookupRemoteStatelessCalculator(RemoteEJBClient.java:70)
+	at com.maggioni.client.RemoteEJBClient.invokeStatelessBean(RemoteEJBClient.java:22)
+	at com.maggioni.client.RemoteEJBClient.main(RemoteEJBClient.java:16)
+Caused by: javax.security.sasl.SaslException: Authentication failed: all available authentication mechanisms failed:
+   JBOSS-LOCAL-USER: javax.security.sasl.SaslException: Failed to read server challenge [Caused by java.io.FileNotFoundException: \opt\repo\versions\10.1\standalone\tmp\auth\local7673066471051300535.challenge (Das System kann den angegebenen Pfad nicht finden)]
+   DIGEST-MD5: Server rejected authentication
+	at org.jboss.remoting3.remote.ClientConnectionOpenListener.allMechanismsFailed(ClientConnectionOpenListener.java:114)
+	at org.jboss.remoting3.remote.ClientConnectionOpenListener$Capabilities.handleEvent(ClientConnectionOpenListener.java:389)
+	at org.jboss.remoting3.remote.ClientConnectionOpenListener$Capabilities.handleEvent(ClientConnectionOpenListener.java:241)
+	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92)
+	at org.xnio.channels.TranslatingSuspendableChannel.handleReadable(TranslatingSuspendableChannel.java:198)
+	at org.xnio.channels.TranslatingSuspendableChannel$1.handleEvent(TranslatingSuspendableChannel.java:112)
+	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92)
+	at org.xnio.ChannelListeners$DelegatingChannelListener.handleEvent(ChannelListeners.java:1092)
+	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92)
+	at org.xnio.conduits.ReadReadyHandler$ChannelListenerHandler.readReady(ReadReadyHandler.java:66)
+	at org.xnio.nio.NioSocketConduit.handleReady(NioSocketConduit.java:89)
+	at org.xnio.nio.WorkerThread.run(WorkerThread.java:567)
+	at ...asynchronous invocation...(Unknown Source)
+	at org.jboss.remoting3.EndpointImpl.doConnect(EndpointImpl.java:294)
+	at org.jboss.remoting3.EndpointImpl.doConnect(EndpointImpl.java:276)
+	at org.jboss.remoting3.EndpointImpl.connect(EndpointImpl.java:393)
+	at org.jboss.remoting3.EndpointImpl.connect(EndpointImpl.java:377)
+	at org.jboss.naming.remote.client.EndpointCache$EndpointWrapper.connect(EndpointCache.java:111)
+	at org.jboss.naming.remote.client.HaRemoteNamingStore.failOverSequence(HaRemoteNamingStore.java:197)
+	... 10 more
