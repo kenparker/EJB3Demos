@@ -1,5 +1,6 @@
 package com.maggioni.client;
 
+import com.maggioni.Stateless2.CalculatorBean;
 import com.maggioni.Stateless2.RemoteCalculator;
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -50,7 +51,14 @@ public class RemoteEJBClient {
 
         // java:jboss/exported/Remote/EJB-Remote-Demo-ejb-1.0/CalculatorBean!com.maggioni.Stateless2.RemoteCalculator
         // let's do the lookup
-        final String jndiname = "ejb:Remote/EJB-Remote-Demo-ejb-1.0//CalculatorBean!" + RemoteCalculator.class.getName();
+        // Normally the appName is the EAR name
+        // Leave it empty if your application isn't packaged in a EAR
+        String appName = "Remote/";
+        // The EJB module name
+        String moduleName = "EJB-Remote-Demo-ejb-1.0/";
+        String beanName = CalculatorBean.class.getSimpleName();
+        String viewClassName = RemoteCalculator.class.getName();
+        final String jndiname = "ejb:" + appName + moduleName + "/" + beanName + "!" + viewClassName;
         System.out.println("jndiname is : " + jndiname);
         return (RemoteCalculator) context.lookup(jndiname);
     }
