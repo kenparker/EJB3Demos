@@ -55,15 +55,7 @@ public class RemoteEJBClient {
         final Context context = new InitialContext(jndiProperties);
 
         /*
-         java:global/Remote/EJB-Remote-Demo-ejb-1.0/CalculatorBean!com.maggioni.Stateless2.RemoteCalculator
-         java:app/EJB-Remote-Demo-ejb-1.0/CalculatorBean!com.maggioni.Stateless2.RemoteCalculator
-         java:module/CalculatorBean!com.maggioni.Stateless2.RemoteCalculator
          java:jboss/exported/Remote/EJB-Remote-Demo-ejb-1.0/CalculatorBean!com.maggioni.Stateless2.RemoteCalculator
-         ejb:Remote/EJB-Remote-Demo-ejb-1.0/CalculatorBean!com.maggioni.Stateless2.RemoteCalculator
-         java:global/Remote/EJB-Remote-Demo-ejb-1.0/CalculatorBean
-         java:app/EJB-Remote-Demo-ejb-1.0/CalculatorBean
-         java:module/CalculatorBean
-        
          -*/
         // let's do the lookup
         // Normally the appName is the EAR name
