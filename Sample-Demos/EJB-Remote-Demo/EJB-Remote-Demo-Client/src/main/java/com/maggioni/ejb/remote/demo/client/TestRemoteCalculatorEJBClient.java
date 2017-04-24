@@ -7,10 +7,6 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
-/**
- *
- * @author magang
- */
 public class TestRemoteCalculatorEJBClient {
 
     public static void main(String[] args) throws Exception {
@@ -18,11 +14,6 @@ public class TestRemoteCalculatorEJBClient {
         invokeStatelessBean();
     }
 
-    /**
-     * Lookup der Remote Bean und Aufruf
-     *
-     * @throws NamingException
-     */
     private static void invokeStatelessBean() throws NamingException {
         // Let's lookup the remote stateless calculator
         final TestRemoteCalculatorFacadeInterface statelessRemoteCalculator
@@ -50,18 +41,6 @@ public class TestRemoteCalculatorEJBClient {
         }
     }
 
-    /**
-     * @param remoteNamingProject Auswirkung auf den erstellten Namen; bei true (Zugriff über remote-naming project und nicht EJB Client core API) wird iGz JNDI
-     * kein ejb: vorangestellt! der Name wird relativ zu java:jboss/exported/ erstellt
-     * @return
-     * java:global/Remote/EJB-Remote-Demo-ejb-1.0/TestRemoteCalculatorFacade!com.maggioni.TestRemoteCalculatorFacadeInterface
-java:app/EJB-Remote-Demo-ejb-1.0/TestRemoteCalculatorFacade!com.maggioni.TestRemoteCalculatorFacadeInterface
-java:module/TestRemoteCalculatorFacade!com.maggioni.TestRemoteCalculatorFacadeInterface
-java:jboss/exported/Remote/EJB-Remote-Demo-ejb-1.0/TestRemoteCalculatorFacade!com.maggioni.TestRemoteCalculatorFacadeInterface
-java:global/Remote/EJB-Remote-Demo-ejb-1.0/TestRemoteCalculatorFacade
-java:app/EJB-Remote-Demo-ejb-1.0/TestRemoteCalculatorFacade
-java:module/TestRemoteCalculatorFacade
-     */
     private static String createLookUpName(boolean remoteNamingProject) {
         // Name der Anwendnung - Achtuung evtl. ist der Name in application.xml verändert worden
         final String appName = "Remote";
@@ -77,7 +56,7 @@ java:module/TestRemoteCalculatorFacade
         // Namen zusammenstellen
         StringBuilder nameBuilder = new StringBuilder();
         if (!remoteNamingProject) {
-            nameBuilder.append("ejb:/");
+            nameBuilder.append("ejb:");
         }
         // Doppelte Trennzeichen sind unproblematisch
         nameBuilder.append(appName);
@@ -85,7 +64,7 @@ java:module/TestRemoteCalculatorFacade
         nameBuilder.append(moduleName);
         nameBuilder.append("/");
         nameBuilder.append(distinctName);
-        //nameBuilder.append("/");
+        nameBuilder.append("/");
         nameBuilder.append(beanName);
         nameBuilder.append("!");
         nameBuilder.append(viewClassName);
@@ -94,19 +73,18 @@ java:module/TestRemoteCalculatorFacade
     }
 
     private static TestRemoteCalculatorFacadeInterface lookupRemoteStatelessCalculator() throws NamingException {
-        final Context context = new InitialContext(TestRemoteCalculatorEJBClient.getJndiPropertiesCoreApiPropertiesFile());
-        String jndiName = createLookUpName(false);
+        final Hashtable jndiProperties = getJndiPropertiesCoreApiPropertiesFile();
+        final Context context = new InitialContext(jndiProperties);
         
-        // ejb:/demo/EJB-Remote-Demo-ejb-1.0/CalculatorBean!com.maggioni.Stateless2.RemoteCalculator
-        // ejb:/Remote/EJB-Remote-Demo-ejb-1.0/TestRemoteCalculatorFacade!com.maggioni.Stateless1.TestRemoteCalculatorFacadeInterface
-        ///     Remote/EJB-Remote-Demo-ejb-1.0/TestRemoteCalculatorFacade!com.maggioni.Stateless1.TestRemoteCalculatorFacadeInterface
+        String jndiName = createLookUpName(false);
         TestRemoteCalculatorFacadeInterface res = (TestRemoteCalculatorFacadeInterface) context.lookup(jndiName);
         return res;
     }
 
-    private static Hashtable<String,String> getJndiPropertiesCoreApiPropertiesFile() {
-        final Hashtable<String,String> jndiProperties = new Hashtable();
+    private static Hashtable getJndiPropertiesCoreApiPropertiesFile() {
+        final Hashtable jndiProperties = new Hashtable();
         jndiProperties.put(Context.URL_PKG_PREFIXES, "org.jboss.ejb.client.naming");
+        jndiProperties.put("jboss.naming.client.ejb.context", true);
         return jndiProperties;
     }
 
