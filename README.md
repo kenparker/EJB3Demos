@@ -1,4 +1,4 @@
-# stackoverflow-1134894
-Stack Overflow Question "Maven2: Best practice for Enterprise Project (EAR file)"
+# EJB3 Demos
 
-http://stackoverflow.com/questions/1134894/
+a collection of Demos to practice with EJB3
+
