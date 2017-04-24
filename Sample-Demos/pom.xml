@@ -12,6 +12,5 @@
         <module>ejb-in-ear</module>
         <module>EJB-Remote-Demo</module>
         <module>EBJStatefulBean-BidderAccount-Demo</module>
-        <module>EJB-Stateless-Remote-Annotations-Demo-1/EJB-Stateless-Remote-Annotations-Demo-1</module>
   </modules>
 </project>
