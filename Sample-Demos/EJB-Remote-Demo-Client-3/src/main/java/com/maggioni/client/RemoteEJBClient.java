@@ -44,11 +44,15 @@ public class RemoteEJBClient {
     }
 
     private static RemoteCalculator lookupRemoteStatelessCalculator() throws NamingException {
-        final Hashtable jndiProperties = new Hashtable<>();
-        jndiProperties.put(Context.URL_PKG_PREFIXES, "org.jboss.ejb.client.naming");
-        jndiProperties.put("jboss.naming.client.ejb.context", true);
+        Hashtable jndiProperties = getJndiProperties();
         final Context context = new InitialContext(jndiProperties);
 
+        String jndiname = createLookUpName();
+        System.out.println("-> jndiname is : " + jndiname);
+        return (RemoteCalculator) context.lookup(jndiname);
+    }
+
+    private static String createLookUpName() {
         // java:jboss/exported/Remote/EJB-Remote-Demo-ejb-1.0/CalculatorBean!com.maggioni.Stateless2.RemoteCalculator
         // let's do the lookup
         // Normally the appName is the EAR name
@@ -59,8 +63,14 @@ public class RemoteEJBClient {
         String beanName = CalculatorBean.class.getSimpleName();
         String viewClassName = RemoteCalculator.class.getName();
         final String jndiname = "ejb:" + appName + moduleName + "/" + beanName + "!" + viewClassName;
-        System.out.println("-> jndiname is : " + jndiname);
-        return (RemoteCalculator) context.lookup(jndiname);
+        return jndiname;
+    }
+
+    private static Hashtable getJndiProperties() {
+        final Hashtable jndiProperties = new Hashtable<>();
+        jndiProperties.put(Context.URL_PKG_PREFIXES, "org.jboss.ejb.client.naming");
+        jndiProperties.put("jboss.naming.client.ejb.context", true);
+        return jndiProperties;
     }
 
 }
