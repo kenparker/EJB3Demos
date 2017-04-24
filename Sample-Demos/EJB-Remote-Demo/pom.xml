@@ -10,6 +10,7 @@
   <modules>
     <module>EJB-Remote-Demo-ear</module>
     <module>EJB-Remote-Demo-ejb</module>
-    <module>EJB-Remote-Demo-Client</module>
+    <module>EJB-Remote-Demo-Client-without-propertiesfile</module>
+    <module>EJB-Remote-Demo-Client-with-propertiesfile</module>
   </modules>
 </project>
