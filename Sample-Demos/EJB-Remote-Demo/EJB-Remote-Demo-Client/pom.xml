@@ -28,10 +28,11 @@
             <type>jar</type>
         </dependency>
         <dependency>
-            <groupId>jboss</groupId>
-            <artifactId>jboss-client</artifactId>
-            <version>4.0.2</version>
-        </dependency>
+             <groupId>org.wildfly</groupId>
+             <artifactId>wildfly-ejb-client-bom</artifactId>
+             <version>10.1.0.Final</version>
+             <type>pom</type>          
+         </dependency>
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-api</artifactId>
