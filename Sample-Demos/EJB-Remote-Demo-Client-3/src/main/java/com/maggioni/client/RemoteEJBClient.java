@@ -20,26 +20,26 @@ public class RemoteEJBClient {
     private static void invokeStatelessBean() throws NamingException {
         // Let's lookup the remote stateless calculator
         final RemoteCalculator statelessRemoteCalculator = lookupRemoteStatelessCalculator();
-        System.out.println("Obtained a remote stateless calculator for invocation");
+        System.out.println("-> Obtained a remote stateless calculator for invocation");
         // invoke on the remote calculator
         int a = 204;
         int b = 340;
-        System.out.println("Adding " + a + " and " + b + " via the remote stateless calculator deployed on the server");
+        System.out.println("-> Adding " + a + " and " + b + " via the remote stateless calculator deployed on the server");
         int sum = statelessRemoteCalculator.add(a, b);
-        System.out.println("Remote calculator returned sum = " + sum);
+        System.out.println("-> Remote calculator returned sum = " + sum);
         if (sum != a + b) {
-            throw new RuntimeException("Remote stateless calculator returned an incorrect sum " + sum + " ,expected sum was "
+            throw new RuntimeException("-> Remote stateless calculator returned an incorrect sum " + sum + " ,expected sum was "
                     + (a + b));
         }
         // try one more invocation, this time for subtraction
         int num1 = 3434;
         int num2 = 2332;
-        System.out.println("Subtracting " + num2 + " from " + num1
+        System.out.println("-> Subtracting " + num2 + " from " + num1
                 + " via the remote stateless calculator deployed on the server");
         int difference = statelessRemoteCalculator.subtract(num1, num2);
-        System.out.println("Remote calculator returned difference = " + difference);
+        System.out.println("-> Remote calculator returned difference = " + difference);
         if (difference != num1 - num2) {
-            throw new RuntimeException("Remote stateless calculator returned an incorrect difference " + difference
+            throw new RuntimeException("-> Remote stateless calculator returned an incorrect difference " + difference
                     + " ,expected difference was " + (num1 - num2));
         }
     }
@@ -49,8 +49,8 @@ public class RemoteEJBClient {
         jndiProperties.put(Context.URL_PKG_PREFIXES, "org.jboss.ejb.client.naming");
         jndiProperties.put(javax.naming.Context.INITIAL_CONTEXT_FACTORY, "org.jboss.naming.remote.client.InitialContextFactory");
         jndiProperties.put(javax.naming.Context.PROVIDER_URL, "http-remoting://env-2627208.jelastic.dogado.eu:8080");
-        jndiProperties.put(javax.naming.Context.SECURITY_PRINCIPAL, "app");
-        jndiProperties.put(javax.naming.Context.SECURITY_CREDENTIALS, "app");
+        jndiProperties.put(javax.naming.Context.SECURITY_PRINCIPAL, "myuser");
+        jndiProperties.put(javax.naming.Context.SECURITY_CREDENTIALS, "myuser");
         jndiProperties.put("jboss.naming.client.ejb.context", true);
         final Context context = new InitialContext(jndiProperties);
 
@@ -66,7 +66,7 @@ public class RemoteEJBClient {
         String beanName = CalculatorBean.class.getSimpleName();
         String viewClassName = RemoteCalculator.class.getName();
         final String jndiname = appName + moduleName + beanName + "!" + viewClassName;
-        System.out.println("jndiname is : " + jndiname);
+        System.out.println("-> jndiname is : " + jndiname);
         return (RemoteCalculator) context.lookup(jndiname);
     }
 

@@ -1,0 +1,18 @@
+Apr 24, 2017 10:34:50 AM org.xnio.Xnio <clinit>
+INFO: XNIO version 3.4.0.Final
+Apr 24, 2017 10:34:50 AM org.xnio.nio.NioXnio <clinit>
+INFO: XNIO NIO Implementation Version 3.4.0.Final
+Apr 24, 2017 10:34:50 AM org.jboss.remoting3.EndpointImpl <clinit>
+INFO: JBoss Remoting version 4.0.21.Final
+-> jndiname is : Remote/EJB-Remote-Demo-ejb-1.0/CalculatorBean!com.maggioni.Stateless2.RemoteCalculator
+Apr 24, 2017 10:34:51 AM org.jboss.ejb.client.remoting.VersionReceiver handleMessage
+INFO: EJBCLIENT000017: Received server version 2 and marshalling strategies [river]
+Apr 24, 2017 10:34:51 AM org.jboss.ejb.client.remoting.RemotingConnectionEJBReceiver associate
+INFO: EJBCLIENT000013: Successful version handshake completed for receiver context EJBReceiverContext{clientContext=org.jboss.ejb.client.EJBClientContext@1536d79, receiver=Remoting connection EJB receiver [connection=Remoting connection <1b30c87> on endpoint "config-based-naming-client-endpoint" <10143d3>,channel=jboss.ejb,nodename=node146907-env-2627208.jelastic.dogado.eu]} on channel Channel ID c4e6870f (outbound) of Remoting connection 0121e813 to env-2627208.jelastic.dogado.eu/185.80.93.250:8080 of endpoint "config-based-naming-client-endpoint" <10143d3>
+Apr 24, 2017 10:34:52 AM org.jboss.ejb.client.EJBClient <clinit>
+INFO: JBoss EJB Client version 2.1.4.Final
+-> Obtained a remote stateless calculator for invocation
+-> Adding 204 and 340 via the remote stateless calculator deployed on the server
+-> Remote calculator returned sum = 544
+-> Subtracting 2332 from 3434 via the remote stateless calculator deployed on the server
+-> Remote calculator returned difference = 1102
