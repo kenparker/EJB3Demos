@@ -75,3 +75,5 @@
 /Sample-Demos/Wildfly-Quickstart-EJB-Remote-Demo-1/Wildfly-Quickstart-EJB-Remote-Demo-1-ejb/target/
 /Sample-Demos/Wildfly-Quickstart-EJB-Remote-Demo-1/Wildfly-Quickstart-EJB-Remote-Demo-1-Client/target/
 /Sample-Demos/Wildfly-Quickstart-EJB-Remote-Demo-1/Wildfly-Quickstart-EJB-Remote-Demo-1-ear/target/
+/Sample-Demos/EJB-Remote-Demo/EJB-Remote-Demo-Client-without-propertiesfile/target/
+/Sample-Demos/EJB-Remote-Demo/EJB-Remote-Demo-Client-with-propertiesfile/target/
