@@ -16,7 +16,7 @@ java:global/Log/EJB-Stateless-Remote-AnnotationsDemo-1-business/LogService
 java:app/EJB-Stateless-Remote-AnnotationsDemo-1-business/LogService
 java:module/LogService
 
-* case 2: @Remote Annotation
+* case 2: @Remote Annotation<br>
 java:global/Log/EJB-Stateless-Remote-AnnotationsDemo-1-business/LogService!**com.maggioni.LogServiceRemote**
 java:app/EJB-Stateless-Remote-AnnotationsDemo-1-business/LogService!com.maggioni.LogServiceRemote
 java:module/LogService!com.maggioni.LogServiceRemote
