@@ -17,16 +17,16 @@ java:app/EJB-Stateless-Remote-AnnotationsDemo-1-business/LogService
 java:module/LogService
 
 * case 2: @Remote Annotation
-java:global/Log/EJB-Stateless-Remote-AnnotationsDemo-1-business/LogService!com.maggioni.LogServiceRemote
+java:global/Log/EJB-Stateless-Remote-AnnotationsDemo-1-business/LogService!**com.maggioni.LogServiceRemote**
 java:app/EJB-Stateless-Remote-AnnotationsDemo-1-business/LogService!com.maggioni.LogServiceRemote
 java:module/LogService!com.maggioni.LogServiceRemote
-<pre>java:jboss/exported/<b>Log/EJB-Stateless-Remote-AnnotationsDemo-1-business/LogService!com.maggioni.LogServiceRemote<b></pre>
+**java:jboss/exported/Log/EJB-Stateless-Remote-AnnotationsDemo-1-business/LogService!com.maggioni.LogServiceRemote**
 java:global/Log/EJB-Stateless-Remote-AnnotationsDemo-1-business/LogService
 java:app/EJB-Stateless-Remote-AnnotationsDemo-1-business/LogService
 java:module/LogService
 
 * case 3: @Stateless(name="Service")
-java:global/Log/EJB-Stateless-Remote-AnnotationsDemo-1-business/Service!com.maggioni.LogServiceRemote
+java:global/Log/EJB-Stateless-Remote-AnnotationsDemo-1-business/**Service**!com.maggioni.LogServiceRemote
 java:app/EJB-Stateless-Remote-AnnotationsDemo-1-business/Service!com.maggioni.LogServiceRemote
 java:module/Service!com.maggioni.LogServiceRemote
 java:jboss/exported/Log/EJB-Stateless-Remote-AnnotationsDemo-1-business/Service!com.maggioni.LogServiceRemote
