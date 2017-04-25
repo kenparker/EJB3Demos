@@ -32,7 +32,7 @@
             <artifactId>junit</artifactId>
         </dependency>
             
-    	<dependency>
+        <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
         </dependency>
@@ -40,7 +40,7 @@
         <dependency>
             <groupId>org.dbunit</groupId>
             <artifactId>dbunit</artifactId>
-        </dependency>
+        </dependency>        
     </dependencies>
     
     <build>

@@ -2,7 +2,7 @@
 <macker>
     
     <ruleset name="Layering rules">
-        <var name="base" value="com.example.myproject" />
+        <var name="base" value="com.maggioni" />
         
         <pattern name="appl" class="${base}.**" />
         <pattern name="common" class="${base}.common.**" />

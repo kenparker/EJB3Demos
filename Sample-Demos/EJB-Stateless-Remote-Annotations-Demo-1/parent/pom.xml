@@ -14,7 +14,7 @@
     <groupId>com.maggioni</groupId>
     <version>1.0</version>
 
-    <name>EJB-Stateless-Remote-Annotations-Demo-1 - Parent</name>
+    <name>EJB-Stateless-Remote-AnnotationsDemo-1 - Parent</name>
     
     <modules>
         <module>EJB-Stateless-Remote-AnnotationsDemo-1-common</module>
@@ -41,7 +41,7 @@
         <javaee.version>7.0</javaee.version>
         <junit.version>4.11</junit.version>
         <mockito.version>1.9.5</mockito.version>
-        <slf4j.version>1.7.7</slf4j.version>
+        <slf4j.version>1.7.25</slf4j.version>
         <dbunit.version>2.5.0</dbunit.version>
         
         <!-- plugin versions -->
