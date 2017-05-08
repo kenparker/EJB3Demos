@@ -43,7 +43,7 @@ public class TestRemoteCalculatorEJBClient {
 
     private static String createLookUpName(boolean remoteNamingProject) {
         // Name der Anwendnung - Achtuung evtl. ist der Name in application.xml verändert worden
-        final String appName = "Remote";
+        final String appName = "remote";
         // EJB Modul i.A. Name des EJB projekts
         final String moduleName = "EJB-Remote-Demo-ejb-1.0";
         // AS7 allows each deployment to have an (optional) distinct name. We haven't specified a distinct name for our EJB deployment, so this is an empty string
@@ -84,7 +84,6 @@ public class TestRemoteCalculatorEJBClient {
     private static Hashtable getJndiPropertiesCoreApiPropertiesFile() {
         final Hashtable jndiProperties = new Hashtable();
         jndiProperties.put(Context.URL_PKG_PREFIXES, "org.jboss.ejb.client.naming");
-        jndiProperties.put("jboss.naming.client.ejb.context", true);
         return jndiProperties;
     }
 
