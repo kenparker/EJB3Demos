@@ -42,32 +42,28 @@ public class TestRemoteCalculatorEJBClient {
     }
 
     private static String createLookUpName(boolean remoteNamingProject) {
-        // Name der Anwendnung - Achtuung evtl. ist der Name in application.xml verändert worden
-        final String appName = "Remote";
-        // EJB Modul i.A. Name des EJB projekts
+        // Application name of the deployed EJBs
+        final String appName = "remote";
+        // EJB Modul name
         final String moduleName = "EJB-Remote-Demo-ejb-1.0";
-        // AS7 allows each deployment to have an (optional) distinct name. We haven't specified a distinct name for our EJB deployment, so this is an empty string
-        // Wird bei uns nicht benutzt!
+        // not used
         final String distinctName = "";
-        // The EJB name which by default is the simple class name of the bean implementation class
+        // The bean implementation class
         final String beanName = TestRemoteCalculatorFacade.class.getSimpleName();
         // the remote view fully qualified class name
         final String viewClassName = TestRemoteCalculatorFacadeInterface.class.getName();
-        // Namen zusammenstellen
+        
         StringBuilder nameBuilder = new StringBuilder();
         if (!remoteNamingProject) {
             nameBuilder.append("ejb:");
         }
-        // Doppelte Trennzeichen sind unproblematisch
+      
         nameBuilder.append(appName);
         nameBuilder.append("/");
         nameBuilder.append(moduleName);
         nameBuilder.append("/");
-        
-            nameBuilder.append(distinctName);
-            nameBuilder.append("/");
-            
-        
+        nameBuilder.append(distinctName);
+        nameBuilder.append("/");
         nameBuilder.append(beanName);
         nameBuilder.append("!");
         nameBuilder.append(viewClassName);
@@ -88,7 +84,7 @@ public class TestRemoteCalculatorEJBClient {
         final Hashtable jndiProperties = new Hashtable();
         jndiProperties.put(Context.URL_PKG_PREFIXES, "org.jboss.ejb.client.naming");
         jndiProperties.put(javax.naming.Context.INITIAL_CONTEXT_FACTORY, "org.jboss.naming.remote.client.InitialContextFactory");
-        jndiProperties.put(javax.naming.Context.PROVIDER_URL, "http-remoting://env-2627208.jelastic.dogado.eu:8080");
+        jndiProperties.put(javax.naming.Context.PROVIDER_URL, "http-remoting://env-1747105.jelastic.dogado.eu:8080");
         jndiProperties.put(javax.naming.Context.SECURITY_PRINCIPAL, "myuser");
         jndiProperties.put(javax.naming.Context.SECURITY_CREDENTIALS, "myuser");
         jndiProperties.put("jboss.naming.client.ejb.context", true);

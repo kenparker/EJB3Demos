@@ -42,23 +42,22 @@ public class TestRemoteCalculatorEJBClient {
     }
 
     private static String createLookUpName(boolean remoteNamingProject) {
-        // Name der Anwendnung - Achtuung evtl. ist der Name in application.xml verändert worden
+        // Application name of the deployed EJBs
         final String appName = "remote";
-        // EJB Modul i.A. Name des EJB projekts
+        // EJB Modul name
         final String moduleName = "EJB-Remote-Demo-ejb-1.0";
-        // AS7 allows each deployment to have an (optional) distinct name. We haven't specified a distinct name for our EJB deployment, so this is an empty string
-        // Wird bei uns nicht benutzt!
+        // not used
         final String distinctName = "";
-        // The EJB name which by default is the simple class name of the bean implementation class
+        // The bean implementation class
         final String beanName = TestRemoteCalculatorFacade.class.getSimpleName();
         // the remote view fully qualified class name
         final String viewClassName = TestRemoteCalculatorFacadeInterface.class.getName();
-        // Namen zusammenstellen
+        
         StringBuilder nameBuilder = new StringBuilder();
         if (!remoteNamingProject) {
             nameBuilder.append("ejb:");
         }
-        // Doppelte Trennzeichen sind unproblematisch
+        
         nameBuilder.append(appName);
         nameBuilder.append("/");
         nameBuilder.append(moduleName);
