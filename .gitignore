@@ -99,3 +99,6 @@
 /Sample-Demos-EJB-Stateful/ejb-in-ear/ear/target/
 /Sample-Demos-EJB-Stateful/ejb-in-ear/ejb/target/
 /Sample-Demos-EJB-Stateful/ejb-in-ear/web/target/
+/Sample-Demos-EJB-Stateful/EBJStatefulBean-BidderAccount-Demo/EJBStatefulBean-BidderAccount-Demo-appclient/target/
+/Sample-Demos-EJB-Stateful/EBJStatefulBean-BidderAccount-Demo/EJBStatefulBean-BidderAccount-Demo-client/target/
+/Sample-Demos-EJB-Stateful/EJB-StatefulBean-ejb-in-ear/ear/target/

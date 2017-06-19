@@ -9,6 +9,6 @@
     <modules>
         <module>StateFulBean-Account-Demo</module>
         <module>EBJStatefulBean-BidderAccount-Demo</module>
-        <module>ejb-in-ear</module>
+        <module>EJB-StatefulBean-ejb-in-ear</module>
     </modules>
 </project>
