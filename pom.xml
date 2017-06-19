@@ -17,5 +17,6 @@
     <module>Sample-Demos</module>
     <module>Maven-Basic-Projects</module>
     <module>Sample-Demos-EJB-Stateful/Sample-Demos-EJB-Stateful</module>
+    <module>Sample-Demos-EJB-Stateful</module>
   </modules>
 </project>
