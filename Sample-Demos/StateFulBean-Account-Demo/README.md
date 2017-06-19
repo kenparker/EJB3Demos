@@ -10,8 +10,8 @@ accountBean = (Account) ic.lookup("java:global/state/AccountBean!com.maggioni.st
 Injecting a Stateful Bean using @Inject is not working for a Servlet.  
 
 ## AccountBean
-@Stateful(name = "AccountBean")
-@Remote(Account.class)
+@Stateful(name = "AccountBean")   
+@Remote(Account.class)   
 public class AccountBean implements Account{
 
     ...
