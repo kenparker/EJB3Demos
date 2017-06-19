@@ -1,1 +1,30 @@
-Basic Example of using a Stateful EJB in a JSF page
+Accessing a Stateful EJB in a JSF Page packaged in a ear file
+=============================================================
+
+core statemets in the demo are following:
+
+
+@Named(value = "info")  
+@SessionScoped   
+public class Info implements Serializable{
+
+    private static final Logger log = Logger.getLogger("root.InfoCreator");
+    private static final long serialVersionUID = 1L;
+    
+    @EJB
+    InfoCreator infoCreator;
+   
+    ...
+}
+
+@Stateful 
+public class InfoCreator{   
+
+    ....
+    
+    @Remove
+    public String createAccount() {
+        this.name = firstName+lastName;
+        return name;
+    }
+}

@@ -1,6 +1,5 @@
 package com.maggioni;
 
-import com.maggioni.InfoCreator;
 import java.io.Serializable;
 import java.util.logging.Logger;
 import javax.ejb.EJB;
