@@ -3,12 +3,12 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.maggioni</groupId>
-        <artifactId>EBJStatefulBean-BidderAccount-Demo</artifactId>
+        <artifactId>EBJ-StatefulBean-BidderAccount-Demo</artifactId>
         <version>1.0</version>
     </parent>
 
     <groupId>com.maggioni</groupId>
-    <artifactId>EBJStatefulBean-BidderAccount-Demo-ejb</artifactId>
+    <artifactId>EBJ-StatefulBean-BidderAccount-Demo-ejb</artifactId>
     
 
     <dependencies>

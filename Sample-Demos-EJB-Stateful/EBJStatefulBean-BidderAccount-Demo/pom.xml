@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     
     <groupId>com.maggioni</groupId>
-    <artifactId>EBJStatefulBean-BidderAccount-Demo</artifactId>
+    <artifactId>EBJ-StatefulBean-BidderAccount-Demo</artifactId>
     <version>1.0</version>
     <packaging>pom</packaging>
     
@@ -29,11 +29,13 @@
         <maven.compiler.source>1.8</maven.compiler.source>
     </properties>
     
-    <name>EBJStatefulBean-BidderAccount-Demo</name>
+    <name>EBJ-StatefulBean-BidderAccount-Demo</name>
     <modules>
         <module>EBJStatefulBean-BidderAccount-Demo-ear</module>
         <module>EBJStatefulBean-BidderAccount-Demo-ejb</module>
         <module>EBJStatefulBean-BidderAccount-Demo-web</module>
+        <module>EJBStatefulBean-BidderAccount-Demo-appclient</module>
+        <module>EJBStatefulBean-BidderAccount-Demo-client</module>
     </modules>
     
     <dependencyManagement>
@@ -42,7 +44,7 @@
             to repeat ourselves in every module -->
             <dependency>
                 <groupId>com.maggioni</groupId>
-                <artifactId>EBJStatefulBean-BidderAccount-Demo-ejb</artifactId>
+                <artifactId>EBJ-StatefulBean-BidderAccount-Demo-ejb</artifactId>
                 <version>${project.version}</version>
                 <type>ejb</type>
             </dependency>
@@ -51,7 +53,7 @@
             ourselves in every module -->
             <dependency>
                 <groupId>com.maggioni</groupId>
-                <artifactId>EBJStatefulBean-BidderAccount-Demo-web</artifactId>
+                <artifactId>EBJ-StatefulBean-BidderAccount-Demo-web</artifactId>
                 <version>${project.version}</version>
                 <type>war</type>
                 <scope>compile</scope>

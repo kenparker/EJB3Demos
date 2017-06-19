@@ -2,28 +2,28 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>EBJStatefulBean-BidderAccount-Demo</artifactId>
+        <artifactId>EBJ-StatefulBean-BidderAccount-Demo</artifactId>
         <groupId>com.maggioni</groupId>
         <version>1.0</version>
     </parent>
 
     <groupId>com.maggioni</groupId>
-    <artifactId>EBJStatefulBean-BidderAccount-Demo-ear</artifactId>
+    <artifactId>EBJ-StatefulBean-BidderAccount-Demo-ear</artifactId>
    
     <packaging>ear</packaging>
 
-    <name>EBJStatefulBean-BidderAccount-Demo-ear</name>
+    <name>EBJ-StatefulBean-BidderAccount-Demo-ear</name>
   
     <dependencies>
         <!-- Dependencies on the EJB and Web modules so that they can be found by the EAR plug-in -->
         <dependency>
             <groupId>com.maggioni</groupId>
-            <artifactId>EBJStatefulBean-BidderAccount-Demo-web</artifactId>
+            <artifactId>EBJ-StatefulBean-BidderAccount-Demo-web</artifactId>
             <type>war</type>
         </dependency>
         <dependency>
             <groupId>com.maggioni</groupId>
-            <artifactId>EBJStatefulBean-BidderAccount-Demo-ejb</artifactId>
+            <artifactId>EBJ-StatefulBean-BidderAccount-Demo-ejb</artifactId>
             <type>ejb</type>
         </dependency>
         
@@ -50,7 +50,7 @@
                         register our War as a web module and set the contextRoot property -->
                         <webModule>
                             <groupId>com.maggioni</groupId>
-                            <artifactId>EBJStatefulBean-BidderAccount-Demo-web</artifactId>
+                            <artifactId>EBJ-StatefulBean-BidderAccount-Demo-web</artifactId>
                             <contextRoot>/StatefulBean</contextRoot>
                         </webModule>
                     </modules>
