@@ -92,3 +92,10 @@
 /Sample-Demos/EJB-Remote-MyMath-Demo/EJB-Remote-MyMath-Demo-Client-with-propertiesfile/target/
 /Sample-Demos/EJB-Remote-MyMath-Demo/EJB-Remote-MyMath-Demo-Client-without-propertiesfile/target/
 /Sample-Demos/StateFulBean-Account-Demo/target/
+/Sample-Demos-EJB-Stateful/StateFulBean-Account-Demo/target/
+/Sample-Demos-EJB-Stateful/EBJStatefulBean-BidderAccount-Demo/EBJStatefulBean-BidderAccount-Demo-ear/target/
+/Sample-Demos-EJB-Stateful/EBJStatefulBean-BidderAccount-Demo/EBJStatefulBean-BidderAccount-Demo-ejb/target/
+/Sample-Demos-EJB-Stateful/EBJStatefulBean-BidderAccount-Demo/EBJStatefulBean-BidderAccount-Demo-web/target/
+/Sample-Demos-EJB-Stateful/ejb-in-ear/ear/target/
+/Sample-Demos-EJB-Stateful/ejb-in-ear/ejb/target/
+/Sample-Demos-EJB-Stateful/ejb-in-ear/web/target/

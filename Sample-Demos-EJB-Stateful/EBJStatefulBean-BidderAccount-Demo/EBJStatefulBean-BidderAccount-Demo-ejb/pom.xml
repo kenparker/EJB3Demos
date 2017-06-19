@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.maggioni</groupId>
+        <artifactId>EBJStatefulBean-BidderAccount-Demo</artifactId>
+        <version>1.0</version>
+    </parent>
+
+    <groupId>com.maggioni</groupId>
+    <artifactId>EBJStatefulBean-BidderAccount-Demo-ejb</artifactId>
+    
+
+    <dependencies>
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>7.0</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+  <build>
+        <!-- Specify the artifact name, this is referred to in the EAR's application.xml -->
+        <finalName>${project.artifactId}</finalName>
+        <!-- Compiler plug-in enforces Java 1.8 compatibility and activates
+            annotation processors -->
+        <plugins>
+            <plugin>
+                <artifactId>maven-ejb-plugin</artifactId>
+                <version>${version.ejb.plugin}</version>
+                <configuration>
+                    <!-- Tell Maven we are using EJB -->
+                    <ejbVersion>3.1</ejbVersion>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
