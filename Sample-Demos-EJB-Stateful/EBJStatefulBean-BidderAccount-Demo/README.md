@@ -1,4 +1,4 @@
-Another Stateful EJB Demo
-=========================
+Accessing Stateful EJB in a Web and a client application
+========================================================
 
-check exacly what this Demo's Goal is.   
+This demo is not yet completed
