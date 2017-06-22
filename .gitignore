@@ -103,3 +103,12 @@
 /Sample-Demos-EJB-Stateful/EBJStatefulBean-BidderAccount-Demo/EJBStatefulBean-BidderAccount-Demo-client/target/
 /Sample-Demos-EJB-Stateful/EJB-StatefulBean-ejb-in-ear/ear/target/
 /Sample-Demos-EJB-Stateful/EJB-Stateful-Name-Demo/target/
+/Java-EE-EJB/archetypes/jaxrs-service-archetype/target/
+/Java-EE-EJB/ejb/async/async-war/target/
+/Java-EE-EJB/ejb/cart/cart-appclient/target/
+/Java-EE-EJB/ejb/cart/cart-common/target/
+/Java-EE-EJB/ejb/cart/cart-ear/target/
+/Java-EE-EJB/ejb/cart/cart-ejb/target/
+/Java-EE-EJB/ejb/counter/target/
+/Java-EE-Ex/case-studies/dukes-bookstore/target/
+/Java-EE-Ex/concurrency/jobs/target/
