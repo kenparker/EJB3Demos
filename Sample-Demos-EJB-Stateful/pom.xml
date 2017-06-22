@@ -10,5 +10,6 @@
         <module>StateFulBean-Account-Demo</module>
         <module>EBJStatefulBean-BidderAccount-Demo</module>
         <module>EJB-StatefulBean-ejb-in-ear</module>
-    </modules>
+    <module>EJB-Stateful-Name-Demo</module>
+  </modules>
 </project>
