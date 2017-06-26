@@ -14,5 +14,6 @@
         <module>EJB-Stateless-Remote-Annotations-Demo-1</module>
         <module>EJB-Remote-MyMath-Demo</module>
         <module>EJB-Remote-WildFly-Quickstart</module>
+        <module>EJB-Accessing-Beans-Demo</module>
     </modules>
 </project>
