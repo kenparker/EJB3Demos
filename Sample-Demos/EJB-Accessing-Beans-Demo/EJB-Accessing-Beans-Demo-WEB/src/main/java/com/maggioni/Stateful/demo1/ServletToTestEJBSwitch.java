@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "ServletToTestEJBSwitch", urlPatterns = {"/ServletToTestEJBSwitch"})
 public class ServletToTestEJBSwitch extends HttpServlet {
 
-    @EJB
+    @Inject
     EJBSwitch switchString;
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
