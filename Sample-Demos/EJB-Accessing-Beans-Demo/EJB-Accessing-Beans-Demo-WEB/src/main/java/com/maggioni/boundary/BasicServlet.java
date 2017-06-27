@@ -1,6 +1,6 @@
 package com.maggioni.boundary;
 
-import com.maggioni.maven.basic.ejb.BasicEBJ;
+import com.maggioni.basic.ejb.BasicEBJ;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.ejb.EJB;
