@@ -1,10 +1,13 @@
 Accessing Session Beans Demos
 =============================
 
-
+Accessing Beans from a Servlet, demos:   
 1. Bean with no-interface View
 2. Bean with @Local, @LocalBean and @Remote Annotations
 3. Bean with @Stateful, no-interface
+
+Accessing Beans from a Web service (JAX-RS):   
+1. Bean with no-interface View
 
 ## Demo 1: no-interface View
 
@@ -37,6 +40,8 @@ Accessing Session Beans Demos
 
         ....
     }
+
+
 
 ## Demo 2: Bean with @Local, @LocalBean and @Remote Annotations
 
@@ -120,4 +125,14 @@ Accessing Session Beans Demos
 
         @Inject
         EJBSwitch switchString;
+    }
+
+## Demo 4: Bean with no-interface, web service (JAX-RS)
+    @Path("BasicRest")
+    public class BasicREST {
+
+        @Inject
+        BasicEBJ basicEBJ;
+
+        ...
     }

@@ -11,4 +11,8 @@ public class BasicEBJ {
     public void sayHello() {
         log.info("-->> say Hello");
     }
+    
+    public String returnHello() {
+        return "Hello";
+    }
 }
