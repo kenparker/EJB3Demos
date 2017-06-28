@@ -1,8 +1,8 @@
-package com.maggioni.bean.multiple_interfaces.web;
+package com.maggioni.bean.multiple_interfaces.web.demo1;
 
-import com.maggioni.bean.multiple_interfaces.ejb.BasicInterfaceA;
-import com.maggioni.bean.multiple_interfaces.ejb.BasicInterfaceB;
-import com.maggioni.bean.multiple_interfaces.ejb.BeanMultipleInterfaces;
+import com.maggioni.bean.multiple_interfaces.ejb.demo1.BasicInterfaceA;
+import com.maggioni.bean.multiple_interfaces.ejb.demo1.BasicInterfaceB;
+import com.maggioni.bean.multiple_interfaces.ejb.demo1.BeanMultipleInterfaces;
 import javax.inject.Inject;
 import javax.ws.rs.Produces;
 import javax.ws.rs.GET;

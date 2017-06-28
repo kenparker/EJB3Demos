@@ -1,4 +1,4 @@
-package com.maggioni.bean.multiple_interfaces.ejb;
+package com.maggioni.bean.multiple_interfaces.ejb.demo1;
 
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
