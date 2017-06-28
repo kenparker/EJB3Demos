@@ -2,7 +2,9 @@ Accessing Session Beans Demos
 =============================
 
 
-the first example is accessing a BasicEJB using the @EJB annotation   
+1. Bean with no-interface View
+2. Bean with @Local, @LocalBean and @Remote Annotations
+3. Bean with @Stateful, no-interface
 
 ## Demo 1: no-interface View
 
@@ -30,7 +32,7 @@ the first example is accessing a BasicEJB using the @EJB annotation
     @WebServlet(name = "BasicServlet", urlPatterns = {"/BasicServlet"})
     public class BasicServlet extends HttpServlet {
 
-        @EJB
+        @Inject
         BasicEBJ basicEBJ;
 
         ....
@@ -103,4 +105,19 @@ the first example is accessing a BasicEJB using the @EJB annotation
         }
 
 
+    }
+
+## Demo 3: Bean with @Stateful, no-interface
+
+    @Stateful
+    public class EJBSwitch {
+
+        ...
+    }
+
+    @WebServlet(name = "ServletToTestEJBSwitch", urlPatterns = {"/ServletToTestEJBSwitch"})
+    public class ServletToTestEJBSwitch extends HttpServlet {
+
+        @Inject
+        EJBSwitch switchString;
     }

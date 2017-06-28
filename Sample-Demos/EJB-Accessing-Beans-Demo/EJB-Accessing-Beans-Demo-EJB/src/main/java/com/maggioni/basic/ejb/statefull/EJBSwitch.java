@@ -1,4 +1,4 @@
-package com.maggioni.stateful.ejb.demo1;
+package com.maggioni.basic.ejb.statefull;
 
 import javax.ejb.Stateful;
 

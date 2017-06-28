@@ -1,4 +1,4 @@
-package com.maggioni.basic.ejb;
+package com.maggioni.basic.ejb.stateless;
 
 import java.util.logging.Logger;
 import javax.ejb.Stateless;
