@@ -20,9 +20,6 @@ public class RESTMultipleInterfacesDemo1 {
     @Inject
     BasicInterfaceBWithLocalAnnotation beanB;
     
-    @Inject
-    BeanMultipleInterfacesBasic beanAB;
-
     @GET
     @Path("A")
     @Produces(MediaType.TEXT_HTML)
@@ -37,10 +34,4 @@ public class RESTMultipleInterfacesDemo1 {
         return beanB.toString() + " " + beanB.getStringB();
     }
     
-    @GET
-    @Path("AB")
-    @Produces(MediaType.TEXT_HTML)
-    public String processGetAB() {
-        return "AB: " + beanAB.toString() + " " + beanAB.getStringA() + " " + beanAB.getStringB();
-    }
 }

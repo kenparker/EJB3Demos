@@ -1,8 +1,10 @@
 package com.maggioni.bean.multiple_interfaces.ejb.demo1;
 
+import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 
 @Stateless
+@LocalBean
 public class BeanMultipleInterfacesBasic implements BasicInterfaceAwithLocalAnnotation, BasicInterfaceBWithLocalAnnotation{
 
     @Override
