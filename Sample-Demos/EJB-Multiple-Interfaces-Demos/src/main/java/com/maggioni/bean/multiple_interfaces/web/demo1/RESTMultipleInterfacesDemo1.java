@@ -8,7 +8,6 @@ import javax.ws.rs.Path;
 import javax.ws.rs.core.MediaType;
 import com.maggioni.bean.multiple_interfaces.ejb.demo1.BasicInterfaceAwithLocalAnnotation;
 import com.maggioni.bean.multiple_interfaces.ejb.demo1.BasicInterfaceBWithLocalAnnotation;
-import com.maggioni.bean.multiple_interfaces.ejb.demo1.BeanMultipleInterfacesBasic;
 
 
 @Path("MultipleInterfacesDemo1")
