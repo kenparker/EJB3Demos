@@ -15,5 +15,6 @@
         <module>EJB-Remote-MyMath-Demo</module>
         <module>EJB-Remote-WildFly-Quickstart</module>
         <module>EJB-Accessing-Beans-Demo</module>
+        <module>EJB-Multiple-Interfaces-Demos</module>
     </modules>
 </project>
