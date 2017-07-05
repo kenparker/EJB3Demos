@@ -112,3 +112,13 @@
 /Java-EE-EJB/ejb/counter/target/
 /Java-EE-Ex/case-studies/dukes-bookstore/target/
 /Java-EE-Ex/concurrency/jobs/target/
+/Sample-Demos/EJB-Getting/Maven-Basic-micro-EAR/target/
+/Sample-Demos/EJB-Getting/Maven-Basic-micro-EJB/target/
+/Sample-Demos/EJB-Getting/Maven-Basic-micro-WEB/target/
+/Sample-Demos/EJB-Accessing-Beans-Demo/Maven-Basic-micro-EAR/target/
+/Sample-Demos/EJB-Accessing-Beans-Demo/Maven-Basic-micro-EJB/target/
+/Sample-Demos/EJB-Accessing-Beans-Demo/Maven-Basic-micro-WEB/target/
+/Sample-Demos/EJB-Accessing-Beans-Demo/EJB-Accessing-Beans-Demo-EAR/target/
+/Sample-Demos/EJB-Accessing-Beans-Demo/EJB-Accessing-Beans-Demo-EJB/target/
+/Sample-Demos/EJB-Accessing-Beans-Demo/EJB-Accessing-Beans-Demo-WEB/target/
+/Sample-Demos/EJB-Multiple-Interfaces-Demos/target/
