@@ -11,35 +11,43 @@ import com.maggioni.bean.multiple_interfaces.ejb.demo1.BasicInterfaceBWithLocalA
 import com.maggioni.bean.multiple_interfaces.ejb.demo1.BeanMultipleInterfacesBasic;
 
 
-@Path("MultipleInterfacesDemo1")
-public class RESTMultipleInterfacesDemo1 {
+@Path("MultipleInterfacesDemo2")
+public class RESTMultipleInterfacesDemo2 {
 
-    private static final String BEANS_EQUALS = "beanA, beanB and Basic are equals: ";
+    private static final String BEANS_A_B_EQUALS = "beanA, beanB are equals: ";
+    private static final String BEANS_BASIC_EQUALS = "beanbasics are equals: ";
     
     @Inject
     BasicInterfaceAwithLocalAnnotation beanA;
     
     @Inject
-    BasicInterfaceBWithLocalAnnotation beanB;
+    BasicInterfaceAwithLocalAnnotation beanB;
     
     @Inject
-    BeanMultipleInterfacesBasic beanBasic;
+    BeanMultipleInterfacesBasic beanBasic1;
+    
+    @Inject
+    BeanMultipleInterfacesBasic beanBasic2;
     
     @GET
     @Path("A")
     @Produces(MediaType.TEXT_HTML)
     public String processGetA() {
-        return BEANS_EQUALS + checkBeans() + " " + beanA.getStringA();
+        return formatOutputCheckBeans() +  " " + beanA.getStringA();
+    }
+
+    private String formatOutputCheckBeans() {
+        return BEANS_A_B_EQUALS + checkBeans(beanA, beanB) + " " + BEANS_BASIC_EQUALS + checkBeans(beanBasic1, beanBasic2);
     }
 
     @GET
     @Path("B")
     @Produces(MediaType.TEXT_HTML)
     public String processGetB() {
-        return BEANS_EQUALS + checkBeans() + " " + beanB.getStringB();
+        return formatOutputCheckBeans() + " " + beanB.getStringA();
     }
     
-    private Boolean checkBeans() {
-        return beanA.equals(beanB) && beanA.equals(beanBasic);
+    private Boolean checkBeans(Object bean1, Object bean2) {
+        return bean1.equals(bean2);
     }   
 }
