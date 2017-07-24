@@ -1,36 +1,34 @@
 package com.maggioni.bean.multiple_interfaces.web.demo1;
 
 
-import javax.inject.Inject;
 import javax.ws.rs.Produces;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.MediaType;
-import com.maggioni.bean.multiple_interfaces.ejb.demo1.BasicInterfaceAwithLocalAnnotation;
-import com.maggioni.bean.multiple_interfaces.ejb.demo1.BasicInterfaceBWithLocalAnnotation;
 import com.maggioni.bean.multiple_interfaces.ejb.demo1.BeanMultipleInterfacesBasic;
+import javax.ejb.EJB;
 
 
-@Path("MultipleInterfacesDemo2")
-public class RESTMultipleInterfacesDemo2 {
+@Path("MultipleInterfacesDemo3")
+public class RESTMultipleInterfacesDemo3 {
 
     private static final String BEANS_BASIC_EQUALS = "beanbasics are equals: >";
         
-    @Inject
+    @EJB
     BeanMultipleInterfacesBasic beanBasic1;
     
-    @Inject
+    @EJB
     BeanMultipleInterfacesBasic beanBasic2;
     
     @GET
     @Path("A")
     @Produces(MediaType.TEXT_HTML)
     public String processGetA() {
-        return formatOutputCheckBeans(); // beanbasics are equals: >false<
+        return formatOutputCheckBeans(); // beanbasics are equals: >true<
     }
 
     private String formatOutputCheckBeans() {
-        return  BEANS_BASIC_EQUALS + checkBeans(beanBasic1, beanBasic2) + "<"; 
+        return  BEANS_BASIC_EQUALS + checkBeans(beanBasic1, beanBasic2) + "<";
     }
 
         
