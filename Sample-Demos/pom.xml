@@ -16,5 +16,6 @@
         <module>EJB-Remote-WildFly-Quickstart</module>
         <module>EJB-Accessing-Beans-Demo</module>
         <module>EJB-Session-Object-Identity</module>
+        <module>EJB-Multiple-Interfaces-Demos</module>
     </modules>
 </project>

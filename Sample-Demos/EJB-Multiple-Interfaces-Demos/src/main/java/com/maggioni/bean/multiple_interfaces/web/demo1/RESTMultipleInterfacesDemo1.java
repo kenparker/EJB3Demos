@@ -14,6 +14,8 @@ import com.maggioni.bean.multiple_interfaces.ejb.demo1.BeanMultipleInterfacesBas
 @Path("MultipleInterfacesDemo1")
 public class RESTMultipleInterfacesDemo1 {
 
+    private static final String BEANS_EQUALS = "beanA, beanB and Basic are equals: ";
+    
     @Inject
     BasicInterfaceAwithLocalAnnotation beanA;
     
@@ -21,26 +23,23 @@ public class RESTMultipleInterfacesDemo1 {
     BasicInterfaceBWithLocalAnnotation beanB;
     
     @Inject
-    BeanMultipleInterfacesBasic beanAB;
-
+    BeanMultipleInterfacesBasic beanBasic;
+    
     @GET
     @Path("A")
     @Produces(MediaType.TEXT_HTML)
     public String processGetA() {
-        return beanA.toString() + " " + beanA.getStringA();
+        return BEANS_EQUALS + checkBeans() + " " + beanA.getStringA();
     }
 
     @GET
     @Path("B")
     @Produces(MediaType.TEXT_HTML)
     public String processGetB() {
-        return beanB.toString() + " " + beanB.getStringB();
+        return BEANS_EQUALS + checkBeans() + " " + beanB.getStringB();
     }
     
-    @GET
-    @Path("AB")
-    @Produces(MediaType.TEXT_HTML)
-    public String processGetAB() {
-        return "AB: " + beanAB.toString() + " " + beanAB.getStringA() + " " + beanAB.getStringB();
-    }
+    private Boolean checkBeans() {
+        return beanA.equals(beanB) && beanA.equals(beanBasic);
+    }   
 }
