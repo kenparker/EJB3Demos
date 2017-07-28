@@ -10,10 +10,11 @@
         <module>EJBStatelessBean-LibrarySessionBean-Demo</module>
         <module>EJBStatelessBean-BidService-Demo</module>
         <module>EJB-Remote-Demo</module>
-        <module>EBJStatefulBean-BidderAccount-Demo</module>
+       
         <module>EJB-Stateless-Remote-Annotations-Demo-1</module>
         <module>EJB-Remote-MyMath-Demo</module>
         <module>EJB-Remote-WildFly-Quickstart</module>
         <module>EJB-Accessing-Beans-Demo</module>
+        <module>EJB-Session-Object-Identity</module>
     </modules>
 </project>

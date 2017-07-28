@@ -8,15 +8,12 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-  <modules>
-    <module>HelloUser-Embeddable-Demo</module>
-    <module>chapter3</module>
-    <module>ejb-remote</module>
-    <module>Ejb3-in-Action</module>
-    <module>WildFly-10-Quickstart</module>
-    <module>Sample-Demos</module>
-    <module>Maven-Basic-Projects</module>
-    <module>Sample-Demos-EJB-Stateful/Sample-Demos-EJB-Stateful</module>
-    <module>Sample-Demos-EJB-Stateful</module>
-  </modules>
+    <modules>
+        <module>HelloUser-Embeddable-Demo</module>
+        <module>Ejb3-in-Action</module>
+        <module>WildFly-10-Quickstart</module>
+        <module>Sample-Demos</module>
+        <module>Maven-Basic-Projects</module>
+        <module>Sample-Demos-EJB-Stateful</module>
+    </modules>
 </project>

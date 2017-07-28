@@ -112,3 +112,6 @@
 /Java-EE-EJB/ejb/counter/target/
 /Java-EE-Ex/case-studies/dukes-bookstore/target/
 /Java-EE-Ex/concurrency/jobs/target/
+/Sample-Demos/EJBStatelessBean-LibrarySessionBean-Demo/target/
+/Sample-Demos/EJBStatelessBean-BidService-Demo/target/
+/Sample-Demos/EJB-Session-Object-Identity/target/
