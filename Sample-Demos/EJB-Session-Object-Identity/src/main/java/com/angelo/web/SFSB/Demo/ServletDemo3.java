@@ -1,6 +1,6 @@
-package com.angelo.web.demo1;
+package com.angelo.web.SFSB.Demo;
 
-import com.angelo.beans.BeanALocalView;
+import com.angelo.beans.SFSBLocalView;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.ejb.EJB;
@@ -10,14 +10,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "ServletDemo1", urlPatterns = {"/ServletDemo1"})
-public class ServletDemo1 extends HttpServlet {
+@WebServlet(name = "ServletDemo3", urlPatterns = {"/ServletDemo3"})
+public class ServletDemo3 extends HttpServlet {
 
     @EJB
-    BeanALocalView beanA;
+    SFSBLocalView beanA;
     
     @EJB
-    BeanALocalView beanB;
+    SFSBLocalView beanB;
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -32,31 +32,33 @@ public class ServletDemo1 extends HttpServlet {
             out.println("<body>");
             out.println("<h1>Test Session Object Identity Using @EJB</h1>");
             
+            out.println("<br>" + beanA.getCounter() + "<br>");
             out.println("<br>beanA and beanB are equal : " + checkIfEqual(beanA, beanB) + "<br>");
-            out.println("<br>" + beanA.getWelcome("Angelo") + "<br>");
+            out.println("<br>beanA : " + beanA.toString());
+            out.println("<br>beanB : " + beanB.toString() + "<br>");
+            out.println("<br>servlet : " + this.toString() + "<br>");
+            
+            beanA.addToCounter(1);
             
             out.println("</body>");
             out.println("</html>");
         }
     }
 
-    private Boolean checkIfEqual(BeanALocalView beanA, BeanALocalView beanB) {
-        // The equals method always returns true when used to compare references to the same business interface type of the same stateless session bean.
+    private Boolean checkIfEqual(SFSBLocalView beanA, SFSBLocalView beanB) {
         return beanA.equals(beanB);
     }
-    
+  
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
     }
 
-    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
     }
 
-    
 }

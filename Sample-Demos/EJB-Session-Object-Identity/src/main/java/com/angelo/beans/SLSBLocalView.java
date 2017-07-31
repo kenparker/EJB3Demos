@@ -7,9 +7,9 @@ import javax.ejb.Stateless;
 
 @Stateless
 @LocalBean
-public class BeanALocalView {
+public class SLSBLocalView {
     
-    Logger logger = Logger.getLogger("root.beanlocalview");
+    Logger logger = Logger.getLogger("root.SLSBlocalview");
     
     public String getWelcome(String name) {
         return "Hello " + name;

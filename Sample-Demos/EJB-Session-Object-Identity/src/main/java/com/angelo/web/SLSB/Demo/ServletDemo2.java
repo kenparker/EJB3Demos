@@ -1,6 +1,6 @@
-package com.angelo.web.demo1;
+package com.angelo.web.SLSB.Demo;
 
-import com.angelo.beans.BeanALocalView;
+import com.angelo.beans.SLSBLocalView;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.inject.Inject;
@@ -14,10 +14,10 @@ import javax.servlet.http.HttpServletResponse;
 public class ServletDemo2 extends HttpServlet {
 
     @Inject
-    BeanALocalView beanA;
+    SLSBLocalView beanA;
     
     @Inject
-    BeanALocalView beanB;
+    SLSBLocalView beanB;
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -27,20 +27,23 @@ public class ServletDemo2 extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet ServletDemo1</title>");            
+            out.println("<title>Servlet ServletDemo2</title>");            
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Test Session Object Identity Using @Inject</h1>");
             
-            out.println("<br>beanA and beanB are equal : " + checkIfEqual(beanA, beanB) + "<br>");
             out.println("<br>" + beanA.getWelcome("Angelo") + "<br>");
-            
+            out.println("<br>beanA and beanB are equal : " + checkIfEqual(beanA, beanB)+ "<br>");
+            out.println("<br>beanA : " + beanA.toString());
+            out.println("<br>beanB : " + beanB.toString() + "<br>");
+            out.println("<br>servlet : " + this.toString() + "<br>");
+                        
             out.println("</body>");
             out.println("</html>");
         }
     }
 
-    private Boolean checkIfEqual(BeanALocalView beanA, BeanALocalView beanB) {
+    private Boolean checkIfEqual(SLSBLocalView beanA, SLSBLocalView beanB) {
         // The equals method always returns true when used to compare references to the same business interface type of the same stateless session bean.
         return beanA.equals(beanB);
     }
