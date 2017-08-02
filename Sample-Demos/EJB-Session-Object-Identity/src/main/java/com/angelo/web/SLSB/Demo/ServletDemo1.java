@@ -4,16 +4,13 @@ import com.angelo.beans.SLSBLocalView;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.ejb.EJB;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 @WebServlet(name = "ServletDemo1", urlPatterns = {"/ServletDemo1"})
-public class ServletDemo1 extends HttpServlet {
+public class ServletDemo1 extends FormatOutputWithBeansIdentity {
 
     @EJB
     SLSBLocalView beanA;
@@ -36,22 +33,14 @@ public class ServletDemo1 extends HttpServlet {
             out.println("<body>");
             out.println("<h1>Test Session Object Identity Using @EJB</h1>");
             
-            out.println("<br>" + beanA.getWelcome("Angelo") + "<br>");
-            out.println("<br>beanA and beanB are equal : " + checkIfEqual(beanA, beanB) + "<br>");
-            out.println("<br>beanA : " + beanA.toString());
-            out.println("<br>beanA.getSessionContext().getBusinessObject(SLSBLocalView.class) : " + beanA.getSessionContext().getBusinessObject(SLSBLocalView.class));
-            out.println("<br>beanB : " + beanB.toString() + "<br>");
-            out.println("<br>servlet : " + this.toString() + "<br>");
+            formatOutput(out, beanA, beanB);
             
             out.println("</body>");
             out.println("</html>");
         }
     }
 
-    private Boolean checkIfEqual(SLSBLocalView beanA, SLSBLocalView beanB) {
-        // The equals method always returns true when used to compare references to the same business interface type of the same stateless session bean.
-        return beanA.equals(beanB);
-    }
+
     
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
